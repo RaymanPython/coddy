@@ -36,3 +36,13 @@ b = list(map(int, input().split()))
 res = merge_sorted_lists(a, b)
 print(res) 
 
+c1, b1 = map(int, input().split())
+t = 0 # Время 
+x = 0 # количество потухших бенгальских огней
+while c1 >= b1:
+    t += c1
+    x += c1
+    c1 = 2 * (x // b1)
+    x %= b1
+print(t)
+# мы каждый раз исплоьзуем все огни и храним в x количество огней из которых мы можем сделать новые огни
